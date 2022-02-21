@@ -6,10 +6,10 @@ import 'package:http/http.dart' as http;
 class News {
   List<ArticleModel> newsArticles = [];
   String url =
-      'https://newsapi.org/v2/top-headlines?country=in&apiKey=7ce0fe0bea6d402da58cf19c5ecc4d14';
+      'https://newsapi.org/v2/top-headlines?country=in&apiKey=';
   Future<void> getNewsData() async {
     String url =
-        'https://newsapi.org/v2/top-headlines?country=in&apiKey=7ce0fe0bea6d402da58cf19c5ecc4d14';
+        'https://newsapi.org/v2/top-headlines?country=in&apiKey=';
     var response = await http.get(url);
 
     var jsonData = jsonDecode(response.body);
@@ -35,10 +35,10 @@ class News {
 class CategoryNews {
   List<ArticleModel> newsArticles = [];
   String url =
-      'https://newsapi.org/v2/top-headlines?country=in&apiKey=7ce0fe0bea6d402da58cf19c5ecc4d14';
+      'https://newsapi.org/v2/top-headlines?country=in&apiKey=';
   Future<void> getNewsData(String category) async {
     String url =
-        'https://newsapi.org/v2/top-headlines?country=in&category=$category&apiKey=7ce0fe0bea6d402da58cf19c5ecc4d14';
+        'https://newsapi.org/v2/top-headlines?country=in&category=$category&apiKey=';
     var response = await http.get(url);
 
     var jsonData = jsonDecode(response.body);
@@ -64,10 +64,10 @@ class CategoryNews {
 class SearchNews {
   List<ArticleModel> newsArticles = [];
   String url =
-      'https://newsapi.org/v2/top-headlines?country=in&apiKey=7ce0fe0bea6d402da58cf19c5ecc4d14';
+      'https://newsapi.org/v2/top-headlines?country=in&apiKey=';
   Future<void> getNewsData(String query) async {
     String url =
-        'https://newsapi.org/v2/everything?q=$query&apiKey=7ce0fe0bea6d402da58cf19c5ecc4d14';
+        'https://newsapi.org/v2/everything?q=$query&apiKey=';
     var response = await http.get(url);
 
     var jsonData = jsonDecode(response.body);
